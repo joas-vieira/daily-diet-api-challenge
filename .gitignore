@@ -1,5 +1,7 @@
 node_modules
 
+dist
+
 db/db.sqlite
 db/db.test.sqlite
 
