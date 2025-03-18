@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "79ddc836-7937-48f8-876e-2bcec9ebc616",
+		"name": "daily-diet-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20281792"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/auth/sign-up",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign-in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john.doe@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/auth/sign-in",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"auth",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign-out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/auth/sign-out",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"auth",
+								"sign-out"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "meals",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lanche\",\n    \"description\": \"Lanche do Saudavel\",\n    \"isOnDiet\": false,\n    \"date\": \"2025-03-12T11:00:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/meals",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:mealId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lanche\",\n    \"description\": \"Lanche do Bolinha\",\n    \"isOnDiet\": false,\n    \"date\": \"2025-03-12T11:00:00.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/meals/1844276c-406e-45cf-a7f9-d1782f1778c4",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"meals",
+								"1844276c-406e-45cf-a7f9-d1782f1778c4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:mealId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/meals/1844276c-406e-45cf-a7f9-d1782f1778c4",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"meals",
+								"1844276c-406e-45cf-a7f9-d1782f1778c4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/meals",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:mealId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/meals/1bc239ca-57e6-45bd-a52d-bb52d9f1da5a",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"meals",
+								"1bc239ca-57e6-45bd-a52d-bb52d9f1da5a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL_DAILY_DIET_API}}/meals/metrics",
+							"host": [
+								"{{BASE_URL_DAILY_DIET_API}}"
+							],
+							"path": [
+								"meals",
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
